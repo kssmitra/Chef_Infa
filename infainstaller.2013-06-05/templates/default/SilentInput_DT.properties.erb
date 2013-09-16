@@ -1,0 +1,38 @@
+##########################################################
+# Informatica Installer Build details
+# Copyright (c) Informatica Corporation 1998 - 2012
+# This software contains confidential and proprietary
+# information of Informatica Corporation
+# All Rights Reserved. 
+##########################################################
+
+
+
+# Use the following guidelines when editing this file:
+# * Use this file to install without user interaction. Save the file 
+#   with the following name:  SilentInput.properties
+# * Any error condition that leads to failure, such as an invalid
+#   installation directory, generates a log file in the  /home/<user name>
+#   directory. For example: /home/informatica/silentErrorLog.log
+
+
+
+
+
+# * The USER_INSTALL_DIR variable must point to a valid directory with write
+#     permissions enabled.
+
+
+# Set the installation type: 
+# 0 -> Select this option to perform a fresh installation of 9.5.0.
+# 1 -> Select this option to upgrade previous versions of Informatica 
+#      products to version 9.5.0. 
+INSTALL_TYPE=<%=node[:infainstaller][:silentinput_dt][:install_type]%>
+
+ 
+# Set the directory for Informatica 9.5.0:
+USER_INSTALL_DIR=<%=node[:infainstaller][:silentinput_dt][:user_install_dir]%>
+
+#Set this variable only for upgrade case i.e. when you set the INSTALL_TYPE=1).
+# Set the directory of the Informatica product to upgrade:
+UPG_BACKUP_DIR=<%=node[:infainstaller][:silentinput_dt][:upg_backup_dir]%>

@@ -1,0 +1,4 @@
+<% @node.nb.mediaservers.each do |msname| -%>
+SERVER = <%= msname %> 
+<% end -%>
+CLIENT_NAME = <%= node.fqdn %>

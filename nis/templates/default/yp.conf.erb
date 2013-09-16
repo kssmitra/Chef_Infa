@@ -1,0 +1,3 @@
+<% node[:nis][:servers].each do |nisserver| -%>
+domain <%= node[:nis][:domain] %> server <%= nisserver %> 
+<% end -%>
